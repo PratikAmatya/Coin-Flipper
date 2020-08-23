@@ -8,22 +8,16 @@ let numHead = 0;
 let numTail = 0;
 let totalCases = 0;
 btn.addEventListener('click', function () {
-	// num.textContent = result;
 	let randomNum = getRandomNumber();
-	// console.log(randomNum);
 	console.log(img.className);
 	if (randomNum % 2 == 0) {
 		img.src = './img/head.png';
 		result.textContent = 'Heads';
-		// result.classList.add(animationOne);
-		// img.classList.add(animationOne);
 		numHead++;
 	} else {
 		result.textContent = 'Tails';
 		console.log(img.className);
 		img.src = './img/tail.png';
-		// img.classList.add(animationOne);
-		// img.classList.toggle('animationOne');
 		numTail++;
 	}
 	totalCases++;
@@ -35,5 +29,3 @@ btn.addEventListener('click', function () {
 function getRandomNumber() {
 	return Math.floor(Math.random() * 123);
 }
-
-// function change

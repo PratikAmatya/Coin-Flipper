@@ -6,10 +6,10 @@
 	--lightBlue: #399cbd;
 	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+
 html {
 	box-sizing: border-box;
 	font-family: Arial;
-	/* animation: transitionIn 0.87s; */
 }
 body {
 	margin: 0;
@@ -17,13 +17,15 @@ body {
 	line-height: 1.4;
 }
 
+.wrapper {
+	display: grid;
+	grid-gap: 40px;
+}
 .main-nav {
 	position: relative;
 	left: 0;
 	top: 0;
-	display: block;
 	width: 100%;
-	min-height: 40px;
 	padding: 10px;
 	font-size: 35px;
 	font-family: 'Playball', cursive;
@@ -33,27 +35,26 @@ body {
 	background: var(--green);
 	box-shadow: var(--shadow);
 }
-.wrapper {
-	display: grid;
-	grid-gap: 50px;
-	grid-template-columns: 1fr;
-	align-items: center;
-	justify-items: center;
-}
+
 .main-info {
-	grid-template-areas: 'flipper details';
-	padding: 0 20px;
 	display: grid;
 	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	/* grid-template-areas: 'flipper details'; */
+	align-items: center;
+	justify-items: center;
+	padding: 0 40px;
+	min-height: 200px;
 }
 .coin-main {
-	grid-area: flipper;
+	/* grid-area: flipper; */
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: 1fr;
 	align-items: center;
 	justify-items: center;
-	padding: 1.5em;
+	padding: 10px;
+	padding: 1.5rem;
 }
 .description {
 	font-size: 33px;
@@ -75,8 +76,6 @@ img {
 	display: inline-block;
 	font-size: 25px;
 	font-family: 'Quicksand', sans-serif;
-	/* font-family: 'Roboto', sans-serif; */
-	/* font-family: 'Alata', sans-serif; */
 }
 .btn:hover {
 	background: var(--lightBlue);
@@ -84,37 +83,60 @@ img {
 }
 
 .record {
-	grid-area: details;
-	border: black;
-	border-style: solid;
-	/* color: white; */
-	border-radius: 14px;
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: 1fr 1fr;
-	/* align-items: end;
-	justify-items: center; */
+	max-width: 20em;
+	min-height: 10em;
+	border: black;
+	border-style: solid;
+	border-radius: 14px;
+
 	padding: 1.5em;
 	font-size: 22px;
 }
 
 .title-record {
-	text-align: center;
 	font-weight: bold;
 }
 
 footer {
-	position: fixed;
+	position: relative;
+	margin-top: 3px;
+	box-shadow: var(--shadow);
 	left: 0;
 	bottom: 0;
-	max-height: 80px;
 	color: white;
 	text-align: center;
-	display: block;
 	width: 100%;
+	display: block;
 	background: var(--green);
-	/* min-height: 40px; */
-	/* padding: 10px; */
-	font-size: 25px;
+	font-size: 30px;
 	font-family: 'Playball', cursive;
+}
+
+/* Media Queries */
+@media (max-width: 970px) {
+	.main-nav {
+		font-size: 30px;
+	}
+	.main-info {
+		padding: 30px;
+	}
+	.record {
+		font-size: 18px;
+		padding: 12px;
+	}
+	.btn {
+		font-size: 18px;
+	}
+	footer {
+		margin-top: 0px;
+	}
+	.description {
+		font-size: 20px;
+	}
+	img {
+		max-height: 150px;
+	}
 }
