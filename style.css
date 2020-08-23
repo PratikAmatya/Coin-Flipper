@@ -1,0 +1,120 @@
+/* CSS Variables */
+:root {
+	--green: #3caea3;
+	--dark: #333;
+	--blue: #20639b;
+	--lightBlue: #399cbd;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+html {
+	box-sizing: border-box;
+	font-family: Arial;
+	/* animation: transitionIn 0.87s; */
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+}
+
+.main-nav {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	min-height: 40px;
+	padding: 10px;
+	font-size: 35px;
+	font-family: 'Playball', cursive;
+	text-align: center;
+	color: white;
+	border-style: none;
+	background: var(--green);
+	box-shadow: var(--shadow);
+}
+.wrapper {
+	display: grid;
+	grid-gap: 50px;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-items: center;
+}
+.main-info {
+	grid-template-areas: 'flipper details';
+	padding: 0 20px;
+	display: grid;
+	grid-gap: 20px;
+}
+.coin-main {
+	grid-area: flipper;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-items: center;
+	padding: 1.5em;
+}
+.description {
+	font-size: 33px;
+}
+img {
+	max-height: 200px;
+}
+
+.btn {
+	margin-top: 0;
+	text-align: center;
+	min-width: 150px;
+	min-height: 45px;
+	background: var(--blue);
+	box-shadow: var(--shadow);
+	border: none;
+	color: white;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 25px;
+	font-family: 'Quicksand', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
+	/* font-family: 'Alata', sans-serif; */
+}
+.btn:hover {
+	background: var(--lightBlue);
+	font-weight: bold;
+}
+
+.record {
+	grid-area: details;
+	border: black;
+	border-style: solid;
+	/* color: white; */
+	border-radius: 14px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	/* align-items: end;
+	justify-items: center; */
+	padding: 1.5em;
+	font-size: 22px;
+}
+
+.title-record {
+	text-align: center;
+	font-weight: bold;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	max-height: 80px;
+	color: white;
+	text-align: center;
+	display: block;
+	width: 100%;
+	background: var(--green);
+	/* min-height: 40px; */
+	/* padding: 10px; */
+	font-size: 25px;
+	font-family: 'Playball', cursive;
+}

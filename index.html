@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Virtual Coin Flipper</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav class="main-nav"><span>Virtual Coin Flipper</span></nav>
+			<section class="main-info">
+				<div class="coin-main">
+					<img src="img/CoinFlip.png" alt="coin" id="image" />
+					<span class="description">
+						Call It!
+					</span>
+					<button class="btn" id="btn">Flip</button>
+				</div>
+				<div class="record">
+					<span class="title-record">Current Session</span>
+					<br />
+					<span class="heads">Heads:</span>
+					<span class="headsNum">0</span>
+					<span class="tails">Tails:</span>
+					<span class="tailsNum">0</span>
+					<span class="total">Total Flips:</span>
+					<span class="totalNum">0</span>
+				</div>
+			</section>
+
+			<footer>
+				<p>
+					Pratik &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+				</p>
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
