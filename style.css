@@ -18,7 +18,6 @@ body {
 }
 
 .wrapper {
-	min-height: 100%;
 	display: grid;
 	grid-gap: 40px;
 }
@@ -100,8 +99,7 @@ img {
 }
 
 footer {
-	position: absolute;
-	/* display: block; */
+	position: relative;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -132,7 +130,7 @@ footer {
 		font-size: 18px;
 	}
 	footer {
-		/* margin-top: 62px; */
+		margin-top: 62px;
 		font-size: 30px;
 	}
 	.description {
@@ -164,33 +162,28 @@ footer {
 	footer {
 		padding: 10px;
 		font-size: 30px;
-		/* margin-top: 4px; */
+		margin-top: 4px;
 	}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
 	.wrapper {
 		grid-gap: 10px;
 	}
 	.main-info {
-		grid-gap: 18px;
+		grid-gap: 15px;
 		padding: 0 20px;
 		margin-top: 0px;
 	}
 	.coin-main {
 		margin: 0;
 		padding: 0;
-		grid-gap: 0;
-		font-size: 18px;
 	}
 	.record {
-		margin-top: 10px;
-		grid-gap: 0;
-		font-size: 16px;
 		padding: 15px;
 	}
 	footer {
 		font-size: 30px;
-		/* margin-top: 0px; */
+		margin-top: 39px;
 	}
 }
