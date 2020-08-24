@@ -99,7 +99,7 @@ img {
 }
 
 footer {
-	position: relative;
+	display: block;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -166,7 +166,7 @@ footer {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
 	.wrapper {
 		grid-gap: 10px;
 	}
@@ -184,6 +184,6 @@ footer {
 	}
 	footer {
 		font-size: 30px;
-		margin-top: 39px;
+		margin-top: 0px;
 	}
 }
