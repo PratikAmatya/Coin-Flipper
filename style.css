@@ -97,9 +97,13 @@ img {
 }
 
 .footer {
+	display: grid;
+	grid-gap: 0px;
 	font-weight: bold;
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
+	align-items: center;
+	justify-items: center;
 	width:100%;
 }
 
