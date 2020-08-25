@@ -39,14 +39,12 @@ body {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	/* grid-template-areas: 'flipper details'; */
 	align-items: center;
 	justify-items: center;
 	padding: 0 40px;
 	min-height: 200px;
 }
 .coin-main {
-	/* grid-area: flipper; */
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: 1fr;
@@ -98,7 +96,13 @@ img {
 	font-weight: bold;
 }
 
-footer {
+.footer {
+	font-weight: bold;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+}
+
+/* footer {
 	position: relative;
 	left: 0;
 	right: 0;
@@ -111,7 +115,7 @@ footer {
 	background: var(--green);
 	font-size: 35px;
 	font-family: 'Playball', cursive;
-}
+} */
 
 /* Media Queries */
 @media (max-width: 700px) {
@@ -129,10 +133,10 @@ footer {
 	.btn {
 		font-size: 18px;
 	}
-	footer {
+	/* footer {
 		margin-top: 62px;
 		font-size: 30px;
-	}
+	}  */
 	.description {
 		font-size: 20px;
 	}
@@ -159,11 +163,11 @@ footer {
 		padding: 15px;
 		margin-bottom: 0px;
 	}
-	footer {
+	/* footer {
 		padding: 10px;
 		font-size: 30px;
 		margin-top: 4px;
-	}
+	}  */
 }
 
 @media (max-width: 400px) {
@@ -182,8 +186,8 @@ footer {
 	.record {
 		padding: 15px;
 	}
-	footer {
+	/* footer {
 		font-size: 30px;
 		margin-top: 39px;
-	}
+	} */
 }
