@@ -13,16 +13,25 @@
 			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#btn').click(function () {
+					$('.visual').toggleClass('rotation');
+					$('.description').toggleClass('descriptionAnimate');
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<nav class="main-nav"><span>Virtual Coin Flipper</span></nav>
 			<section class="main-info">
 				<div class="coin-main">
-					<img src="img/CoinFlip.png" alt="coin" id="image" />
-					<span class="description">
-						Call It!
-					</span>
+					<div class="visual">
+						<img src="img/CoinFlip.png" alt="coin" id="image" />
+					</div>
+					<span class="description"> Call It! </span>
 					<button class="btn" id="btn">Flip</button>
 				</div>
 				<div class="record">

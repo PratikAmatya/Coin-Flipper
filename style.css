@@ -56,10 +56,25 @@ body {
 .description {
 	font-size: 33px;
 }
+
 img {
 	max-height: 200px;
 }
-
+.visual {
+	transition: all 0.3s linear;
+}
+.rotation {
+	-webkit-transform: rotate(360deg); /* Chrome, Safari 3.1+ */
+	-moz-transform: rotate(360deg); /* Firefox 3.5-15 */
+	-ms-transform: rotate(360deg); /* IE 9 */
+	-o-transform: rotate(360deg); /* Opera 10.50-12.00 */
+	transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera 12.10+ */
+	/* transform: rotate(60deg); */
+	transition: 900ms;
+}
+.descriptionAnimate {
+	animation: transitionIn 0.75s;
+}
 .btn {
 	margin-top: 0;
 	text-align: center;
@@ -104,23 +119,8 @@ img {
 	text-align: center;
 	align-items: center;
 	justify-items: center;
-	width:100%;
+	width: 100%;
 }
-
-/* footer {
-	position: relative;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin-top: 60px;
-	padding: 10px;
-	box-shadow: var(--shadow);
-	color: white;
-	text-align: center;
-	background: var(--green);
-	font-size: 35px;
-	font-family: 'Playball', cursive;
-} */
 
 /* Media Queries */
 @media (max-width: 700px) {
@@ -138,10 +138,6 @@ img {
 	.btn {
 		font-size: 18px;
 	}
-	/* footer {
-		margin-top: 62px;
-		font-size: 30px;
-	}  */
 	.description {
 		font-size: 20px;
 	}
@@ -168,11 +164,6 @@ img {
 		padding: 15px;
 		margin-bottom: 0px;
 	}
-	/* footer {
-		padding: 10px;
-		font-size: 30px;
-		margin-top: 4px;
-	}  */
 }
 
 @media (max-width: 400px) {
@@ -191,8 +182,15 @@ img {
 	.record {
 		padding: 15px;
 	}
-	/* footer {
-		font-size: 30px;
-		margin-top: 39px;
-	} */
+}
+
+@keyframes transitionIn {
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
 }

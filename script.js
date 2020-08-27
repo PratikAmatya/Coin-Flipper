@@ -9,14 +9,14 @@ let numTail = 0;
 let totalCases = 0;
 btn.addEventListener('click', function () {
 	let randomNum = getRandomNumber();
-	console.log(img.className);
+	// console.log(img.className);
 	if (randomNum % 2 == 0) {
 		img.src = './img/head.png';
 		result.textContent = 'Heads';
 		numHead++;
 	} else {
 		result.textContent = 'Tails';
-		console.log(img.className);
+		// console.log(img.className);
 		img.src = './img/tail.png';
 		numTail++;
 	}
